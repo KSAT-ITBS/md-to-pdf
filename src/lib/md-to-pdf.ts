@@ -50,6 +50,7 @@ export const convertMdToPdf = async (
 
 	if ((headerTemplate || footerTemplate) && displayHeaderFooter === undefined) {
 		config.pdf_options.displayHeaderFooter = true;
+		config.pdf_options.timeout = 10000;
 	}
 
 	const arrayOptions = ['body_class', 'script', 'stylesheet'] as const;
